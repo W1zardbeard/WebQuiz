@@ -1,0 +1,24 @@
+{
+  "name": "multi-step-form-main",
+  "version": "1.0.0",
+  "description": "A multi step form project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jquery": "^3.7.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4",
+    "wepack": "^0.0.1"
+  }
+}

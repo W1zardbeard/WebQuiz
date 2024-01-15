@@ -1,0 +1,458 @@
+html, body { 
+    margin: 0; 
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    margin-block-end: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color:#F4F6FA;
+}
+
+.hidden{
+    display:none;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+/*=======================TEXT ==========================*/
+h1{
+    font-weight:300;
+    font-size:3rem;
+    color:#313E51;
+    padding: 0;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
+h2{
+    padding: 0;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
+p{
+    padding: 0;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-size:1.25rem
+}
+
+a{
+    text-decoration: none;
+}
+
+.heroTitle{
+    color:#313E51;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 1.75rem */
+}
+
+
+
+.subHead{
+    color:#626C7F;
+    font-style: italic;
+}
+
+.answerText{
+    color:#313E51;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 1.75rem */
+    flex-basis: auto;
+    flex-grow: 2;
+}
+
+.questionText{
+    color: #313E51;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 2.7rem */
+}
+
+.bold{
+    font-weight:500 ;
+}
+
+.horizontal-8px{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+}
+
+
+
+/*=======================Components ==========================*/
+main{
+    background-color:#F4F6FA;
+    display:flex;
+    flex-direction: column;
+    gap:5rem;
+    padding-top:5rem;
+    align-items:center;
+    height:100vh;
+    background-image: url("/images/pattern-background-desktop-light.svg");
+    background-size: cover;
+}
+
+
+.heroBar{
+    display:flex;
+    gap:2rem;
+    align-items: flex-start;
+    width:100%;
+    width:1160px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.subjectTitle{
+    display: flex;
+    gap:2rem;
+    align-items: center;
+
+}
+
+.subjectTitle > img{
+    align-self: center;
+}
+
+
+
+.mainContainer{
+    width:1160px;
+    box-sizing: border-box;
+    display:flex;
+}
+
+.splashContainer{
+    width:666px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:48px;
+    text-align: center;
+}
+
+.leftCol{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    align-items: flex-start;
+    width:50%;
+    box-sizing: border-box;
+    padding-right:8rem;
+}
+
+.rightCol{
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+    width:50%;
+}
+
+#form{
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+    width:100%;
+}
+
+
+/*=======================button ==========================*/
+
+
+.btn{
+    width:100%;
+    box-sizing: border-box;
+    padding:2rem;
+    display:flex;
+    justify-content: center;
+    border-radius:1.5rem;
+    background-color:#A729F5;
+    border:none;
+    font-size:1.75rem;
+    font-weight:500;
+    color:#ffffff;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+}
+
+button:disabled {
+    opacity:0.4;
+    pointer-events: none;
+}
+
+
+.btn:hover{
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), #A729F5;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+}
+
+.psudoButton{
+    width:100%;
+}
+
+/*=======================choice card ==========================*/
+
+.optionCard{
+    background-color:#ffffff;
+    border-radius:1.5rem;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    display:flex;
+    align-items: center;
+    padding:1.25rem;
+    gap:2rem;
+    box-sizing: border-box;
+}
+
+.optionCard:hover{
+    box-shadow: 0px 8px 10px 0px rgba(143, 160, 193, 0.14);
+    background-color:#fcfcfc;
+    cursor: pointer;
+}
+
+.iconCont{
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    display:flex;
+    align-items: center;
+}
+
+.questionLetterCont{
+    background-color:#F4F6FA;
+    width:3.5rem;
+    height:3.5rem;
+    text-align: center;
+    justify-content: center;
+    color:#626C7F;
+    box-sizing: border-box;
+}
+
+.HTMLbg{
+    background-color:#FFF1E9;
+}
+
+.CSSbg{
+    background-color:#E0FDEF;
+}
+
+.JSbg{
+    background-color:#EBF0FF;
+}
+
+.Accessbg{
+    background-color:#F6E7FF;
+}
+
+ input[type="radio"]{
+    display:none;
+    cursor:pointer;
+} 
+
+.card-input-element:checked + .optionCard{
+    box-shadow: 0 0 0 3px #A729F5 inset;
+    box-sizing: border-box;
+}
+
+
+.selectedIcon{
+    background-color:#A729F5;
+    color:#ffffff;
+}
+
+.selectedIconCorrect{
+    background-color:#26D782;
+    color:#ffffff;
+}
+
+.correct{
+    box-shadow: 0 0 0 3px #26D782 inset;
+    box-sizing: border-box;
+}
+
+.incorrect{
+    box-shadow: 0 0 0 3px #EE5454 inset;
+    box-sizing: border-box;
+}
+
+.selectedIconInorrect{
+    background-color:#EE5454;
+    color:#ffffff;
+}
+
+.noMouseEvents{
+    pointer-events: none;
+}
+
+
+
+
+
+
+/*=======================progress bar ==========================*/
+
+.progressBar{
+    background-color:#ffffff;
+    height:1rem;
+    width:100%;
+    border-radius:16px;
+    display:flex;
+    align-items: center;
+    padding-left:8px;
+    padding-right:8px;
+}
+
+.currentProgress{
+    background-color:#A729F5;
+    height:50%;
+    border-radius:16px;
+    
+}
+
+
+
+/*=======================Email input ================*/
+.emailIcon{
+    margin-right:1rem;
+}
+
+.emailField{
+    border:none;
+    width:100%;
+    padding:2rem;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 0.9375rem;
+    background: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+    width:100%;
+    gap:1rem;
+    font-size: 1.5rem;
+}
+
+.emailField::placeholder{
+    color: #B3B3B3;
+    font-family: 'Outfit', sans-serif;;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px #A729F5 inset;
+    outline:0;
+  }
+
+  .emailForm{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    
+    justify-content: space-between;
+    
+    
+  }
+
+  .submitEmailBtn{
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    flex:1;
+    margin-left:1rem;
+  }
+
+/* ===================== Drop down menu ===========================*/
+ul li {
+    list-style: none;
+    margin: 0 auto;
+    
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    
+  }
+
+  li a {
+    color: #313e51;
+  }
+
+  li a:hover {
+    color: #A729F5;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding-left: 0;
+    left: 0;
+    display: none;
+    background: white;
+  }
+
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    min-width: 250px;
+    text-align: left;
+    padding-top: 20px;
+    box-shadow: 0px 3px 5px -1px #ccc;
+  }
+
+  ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+  }
+
+  ul li ul li a:hover {
+    
+    border-left: 2px solid #A729F5;
+   
+  }
+
+
+
+a {
+
+  text-decoration: none;
+
+  &:hover {
+      color: #A729F5;
+  }
+
+}
+
+
+

@@ -1,0 +1,25 @@
+<label class="answerCard">
+    <input type="radio" name="answers" class="card-input-element ">
+    <div class="optionCard ">
+        <div class="iconCont questionLetterCont">
+            <% if(item == 0){%>
+                <h2>A</h2>
+            <%} else if(item == 1){%>
+                <h2>B</h2>
+            <%} else if(item == 2){%>
+                <h2>C</h2>
+            <%} else if(item == 3){%>
+                <h2>D</h2>
+            <%}%>
+            
+        </div>
+        <p class="answerText"><%= data.questions[question].options[item]%></p>
+        <img src="../images/icon-correct.svg" id="correct" class="hidden">
+        <img src="../images/icon-incorrect.svg" id="incorrect" class="hide">
+    
+    </div>
+    
+</label>
+    
+    
+    

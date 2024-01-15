@@ -1,0 +1,36 @@
+<div class="mainContainer">
+    <div class="leftCol">
+        <p class="subHead">Question <%= question + 1 %> out of <%=data.questions.length%></p>
+        <h1 class="questionText"><%= data.questions[question].question%> </h1>
+
+        <div class="progressBar">
+            <div class="currentProgress" style="width: <%=question + 1%>0%;"></div>
+        </div>
+        
+    </div>
+
+    <div class="rightCol">
+    <form id="form" method="POST" action="<%= question + 1 %> ">
+       <% if (locals.data){ %>
+            <% for(let i = 0; i < data.questions[question].options.length; i++){%>
+                <%- include("answerCard.ejs", {item:i})%>
+            <%}%>
+       <%} else{ %>
+            <h1>Something has gone wrong</h1>
+       <%}%>
+        
+        <button disabled class="btn submitAnswerBtn" type="submit" 
+
+        <% if(question == 9){%>
+            form="/finishQuiz">
+        <%} else{%>
+            form="">
+        <%}%>    
+
+
+       
+            Submit answer</button>
+       
+    </form>   
+    </div>
+</div>

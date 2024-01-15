@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+
+  <title>Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    <% if(locals.answer){%>
+      var correctAnswer = "<%- answer %>" 
+      var questionEnd = <%- question %>;
+      console.log(correctAnswer);
+    <%} else{%>
+      console.log("no answer");
+    <%}%>
+    
+    
+    
+  </script>
+</head>
+<body>
+
+    <main>
+    

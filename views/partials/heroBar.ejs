@@ -1,0 +1,55 @@
+<div class="heroBar">
+    <div class="subjectTitle">
+        <% if(locals.quizState == "none"){%>
+            
+                <img src="../images/favicon-32x32.png">
+        
+            <h2 class="heroTitle">Front end quiz</h2>
+        <%} else if(locals.quizState == "HTML"){%>
+            <div class="iconCont HTMLbg">
+                <img src="../images/icon-html.svg">
+            </div>
+            <h2 class="heroTitle">HTML</h2>
+        <%} else if(locals.quizState == "CSS"){%>
+            <div class="iconCont CSSbg">
+                <img src="../images/icon-css.svg">
+            </div>
+            <h2 class="heroTitle">CSS</h2>
+        <%} else if(locals.quizState == "JS"){%>
+            <div class="iconCont JSbg">
+                <img src="../images/icon-js.svg">
+            </div>
+            <h2 class="heroTitle">JavaScript</h2>
+        <%} else if(locals.quizState == "Accessability"){%>
+            <div class="iconCont Accessbg">
+                <img src="../images/icon-accessibility.svg">
+            </div>
+            <h2 class="heroTitle">Accessability</h2>
+        <%}%>
+    </div>
+
+    
+
+    <div>
+    
+            <ul>
+             
+              <li><% if(locals.email){%>
+                <a href="#">
+                <p class="currentEmail">
+                <%= email %> 
+                &dtrif;</a>
+                <%}%>
+                <ul class="dropdown">
+                  <li><a href="/">Change user</a></li>
+                  <li><a href="/results">My results</a></li>
+                 
+                </ul>
+              </li>
+              
+            </ul>
+       
+    </div>
+    
+</div>
+

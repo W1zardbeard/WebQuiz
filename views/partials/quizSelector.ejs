@@ -1,0 +1,21 @@
+<a href="/<%= data[item].title %>/1">
+<div class="optionCard">
+    <div class="iconCont 
+        <% if(item == 0){%>
+            HTMLbg
+        <%} else if(item == 1){%>
+            CSSbg
+        <%} else if (item == 2){%>
+            JSbg
+        <%} else if (item == 3){%>
+            Accessbg
+        <%}%> 
+        "> 
+        <img src="<%= data[item].icon%>">
+    </div>
+    <p class="answerText"><%= data[item].title%></p>
+
+</div>
+</a>
+
+
