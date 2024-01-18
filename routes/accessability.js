@@ -3,6 +3,7 @@ const router = express.Router();
 router.use(express.static("public"));
 import * as j from '../data.json' assert {type: 'json'};
 import{user as user} from "./../global.js";
+import {saveResult, accessResult} from '../quizLogic.js';
 var data = j.default.quizzes
 
 var game = 3;
@@ -19,6 +20,7 @@ router.get("/1", (req, res) => {
 })
 
 router.post("/1", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("2");
 })
 
@@ -40,6 +42,7 @@ router.get("/2", (req, res) => {
 })
 
 router.post("/2", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("3");
 })
 
@@ -58,6 +61,7 @@ router.get("/3", (req, res) => {
 })
 
 router.post("/3", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("4");
 })
 
@@ -76,6 +80,7 @@ router.get("/4", (req, res) => {
 })
 
 router.post("/4", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("5");
 })
 
@@ -94,6 +99,7 @@ router.get("/5", (req, res) => {
 })
 
 router.post("/5", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("6");
 })
 
@@ -112,6 +118,7 @@ router.get("/6", (req, res) => {
 })
 
 router.post("/6", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("7");
 })
 
@@ -132,6 +139,7 @@ router.get("/7", (req, res) => {
 })
 
 router.post("/7", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("8");
 })
 
@@ -151,6 +159,7 @@ router.get("/8", (req, res) => {
 })
 
 router.post("/8", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("9");
 })
 
@@ -171,6 +180,7 @@ router.get("/9", (req, res) => {
 })
 
 router.post("/9", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("10");
 })
 
@@ -190,9 +200,16 @@ router.get("/10", (req, res) => {
 })
 
 router.post("/10", (req, res) =>{
-    res.redirect("11");
+    saveResult(game, req.body.submission);
+    res.redirect("total");
 })
 
+router.get("/total", (req, res) => {
+    res.render("quizResult.ejs",{
+        quizState: "Accessability",
+        resultNumber: accessResult
+    });
+})
 
 
 
