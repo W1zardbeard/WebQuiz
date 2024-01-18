@@ -35,8 +35,9 @@ $(".submitAnswerBtn").on("click", function(){
     console.log("Clicked option text: " + clickedOptionText);
     console.log("Correct answer: " + correctAnswer);
     console.log(correctOption);
-    console.log($(correctOption).children().children(".answerText").text())
+    console.log($(correctOption).children().children(".answerText").text());
 
+    //RIGHT ANSWER =======================================================
     if(clickedOptionText == correctAnswer && clickerCount == false){
         console.log("correct");
         if(questionEnd == 9){
@@ -44,6 +45,11 @@ $(".submitAnswerBtn").on("click", function(){
         }else{
             $(".submitAnswerBtn").html("Next question");
         }
+
+
+        // Make hidden text field show right    
+        $('#sendResult').val("Right"); 
+
         $(clickedOption).children(".card-input-element").removeClass("card-input-element");
         $(clickedOption).children(".card-input-element").addClass("correct");
         $(clickedOption).children(".optionCard").addClass("correct");
@@ -53,7 +59,7 @@ $(".submitAnswerBtn").on("click", function(){
         $(".answerCard").addClass("noMouseEvents");
         clickerCount = true;
        
-        
+       //WRONG ANSWER ======================================================= 
     } else if (clickedOptionText != correctAnswer && clickerCount == false){
         console.log("Wrong");
             if(questionEnd == 9){
@@ -61,18 +67,18 @@ $(".submitAnswerBtn").on("click", function(){
             }else{
                 $(".submitAnswerBtn").html("Next question");
             }
-        
+
+        // Make hidden text field show wrong    
+        $('#sendResult').val("Wrong"); 
+
         $(clickedOption).children(".card-input-element").removeClass("card-input-element");
         $(clickedOption).children(".card-input-element").addClass("incorrect");
         $(clickedOption).children(".optionCard").addClass("incorrect");
         $(clickedOption).children().children(".questionLetterCont").addClass("selectedIconInorrect");
 
-        //$(clickedOption).children(".optionCard").children("#incorrect").removeClass("hidden");
+       
         $(clickedOption).children(".optionCard").children("#incorrect").removeClass("hide");
 
-        // $(correctOption).children(".card-input-element").addClass("correct");
-        // $(correctOption).children(".optionCard").addClass("correct");
-        // $(correctOption).children().children(".questionLetterCont").addClass("selectedIconCorrect");
         $(correctOption).children(".optionCard").children("#correct").removeClass("hidden");
         $(correctOption).children(".optionCard").children("#incorrect").addClass("hidden");
         $(correctOption).children(".optionCard").children("#incorrect").addClass("hide");

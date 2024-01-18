@@ -3,9 +3,14 @@ const router = express.Router();
 router.use(express.static("public"));
 import * as j from '../data.json' assert {type: 'json'};
 import{user as user} from "./../global.js";
+import {saveResult} from '../quizLogic.js';
 var data = j.default.quizzes
 
 var game = 0;
+var result;
+
+
+
 
 router.get("/1", (req, res) => {
     var question = 1 - 1;
@@ -19,6 +24,7 @@ router.get("/1", (req, res) => {
 })
 
 router.post("/1", (req, res) =>{
+    saveResult(game, req.body.submission);
     res.redirect("2");
 })
 

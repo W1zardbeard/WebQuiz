@@ -11,6 +11,10 @@
 
     <div class="rightCol">
     <form id="form" method="POST" action="<%= question + 1 %> ">
+
+        <!--Hidden form-->
+        <input type="text" id="sendResult" name="submission" class="hidden">
+
        <% if (locals.data){ %>
             <% for(let i = 0; i < data.questions[question].options.length; i++){%>
                 <%- include("answerCard.ejs", {item:i})%>
