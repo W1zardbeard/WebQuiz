@@ -10,7 +10,7 @@ import{user as user} from "./global.js";
 const app = express();
 const port = 3000;
 
-const db = new pg.Client({
+export const db = new pg.Client({
     user: "postgres",
     host: "localhost",
     database: "webDevQuiz",

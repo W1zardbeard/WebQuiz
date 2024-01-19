@@ -3,7 +3,8 @@ const router = express.Router();
 router.use(express.static("public"));
 import * as j from '../data.json' assert {type: 'json'};
 import{user as user} from "./../global.js";
-import {saveResult, accessResult} from '../quizLogic.js';
+import {saveResult, resetScores, accessResult, submitResults} from '../quizLogic.js';
+
 var data = j.default.quizzes
 
 var game = 3;
@@ -201,15 +202,18 @@ router.get("/10", (req, res) => {
 
 router.post("/10", (req, res) =>{
     saveResult(game, req.body.submission);
+    submitResults(game);
     res.redirect("total");
 })
 
 router.get("/total", (req, res) => {
     res.render("quizResult.ejs",{
+        email: user.email,
         quizState: "Accessability",
         resultNumber: accessResult
     });
-})
+    resetScores();
+});
 
 
 
