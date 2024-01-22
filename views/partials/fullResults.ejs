@@ -1,0 +1,67 @@
+<div class="mainContainer">
+<div class=" resultCont">
+    <div class="resultCard">
+        <div class="subjectTitle column">
+            
+                <div class="iconCont HTMLbg">
+                    <img src="../images/icon-html.svg">
+                </div>
+                <h2 class="heroTitle">HTML</h2>
+        </div>
+        <% if(locals.htmlResults){%>
+            <h1 class="resultNumber"><%= htmlResults %></h1>
+            <p class="subHead">out of 10</p>
+        <%} else{%>
+            <p> sucky</p>
+        <%}%>
+    </div>
+
+    <div class="resultCard">
+        <div class="subjectTitle column">
+            
+                <div class="iconCont CSSbg">
+                    <img src="../images/icon-css.svg">
+                </div>
+                <h2 class="heroTitle">CSS</h2>
+        </div>
+        <% if(locals.cssResults){%>
+            <h1 class="resultNumber"><%= cssResults %></h1>
+            <p class="subHead">out of 10</p>
+        <%} else{%>
+            <p> sucky</p>
+        <%}%>
+    </div>
+
+    <div class="resultCard">
+        <div class="subjectTitle column">
+            
+                <div class="iconCont JSbg">
+                    <img src="../images/icon-js.svg">
+                </div>
+                <h2 class="heroTitle">Javascript</h2>
+        </div>
+        <% if(locals.jsResults){%>
+            <h1 class="resultNumber"><%= jsResults %></h1>
+            <p class="subHead">out of 10</p>
+        <%}else{%>
+            <p> sucky</p>
+        <%}%>
+    </div>
+
+    <div class="resultCard">
+        <div class="subjectTitle column">
+            
+                <div class="iconCont Accessbg">
+                    <img src="../images/icon-accessibility.svg">
+                </div>
+                <h2 class="heroTitle">Accessibility</h2>
+        </div>
+        <% if(locals.accessResults){%>
+            <h1 class="resultNumber"><%= accessResults %></h1>
+            <p class="subHead">out of 10</p>
+        <%}else{%>
+            <p> sucky</p>
+        <%}%>
+    </div>
+    </div>
+    </div>

@@ -208,6 +208,10 @@ button:disabled {
     width:100%;
 }
 
+.column{
+    flex-direction: column;
+}
+
 /*=======================choice card ==========================*/
 
 .optionCard{
@@ -469,6 +473,7 @@ a {
     box-sizing: border-box;
     justify-content: center;
     flex-direction: column;
+    flex: 1 1 0px;
 }
 
 .resultNumber{
@@ -476,4 +481,12 @@ a {
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
+}
+
+.resultCont{
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    gap:1.5rem;
+    width:100%;
 }

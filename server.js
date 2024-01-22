@@ -50,12 +50,44 @@ async function createNewUser(emailAddress){
 
 // async function getResults(email, id){
 //     const searchResults = await db.query(
-//         "SELECT *
-//         FROM users AS u
-//         JOIN htmlresults AS html ON u.id = html.userid
-//         JOIN cssresults AS css ON u.id = css.userid"
+//         "SELECT * FROM users AS u JOIN htmlresults AS html ON u.id = html.userid JOIN cssresults AS css ON u.id = css.userid JOIN jsresults AS js ON u.id = js.userid JOIN accessresults AS ac ON u.id = ac.userid"
 //     )
+
 // }
+
+async function getResults(email, id){
+    try{
+        var htmlSearchResults = await db.query(
+            "SELECT result FROM users AS u JOIN htmlresults AS html ON u.id = html.userid WHERE u.id = $1",
+            [id]
+        )
+    } catch(err){
+        console.log(err);
+    }
+
+    
+
+    
+
+    // const cssSearchResults = await db.query(
+    //     "SELECT result FROM users AS u JOIN cssresults AS css ON u.id = css.userid WHERE u.id = $1",
+    //     [id]
+    // )
+
+    // const jsSearchResults = await db.query(
+    //     "SELECT result FROM users AS u JOIN jsresults AS js ON u.id = js.userid WHERE u.id = $1",
+    //     [id]
+    // )
+
+    // const accessSearchResults = await db.query(
+    //     "SELECT result FROM users AS u JOIN accessresults AS ac ON u.id = ac.userid WHERE u.id = $1",
+    //     [id]
+    // )
+
+    console.log(htmlSearchResults.rows.length);
+   // return [htmlSearchResults, cssSearchResults, jsSearchResults, accessSearchResults];
+        return [htmlSearchResults];
+}
 
 
 app.get("/", (req, res) => {
@@ -87,9 +119,30 @@ app.get("/subjectPick", (req, res) => {
 })
 
 
-// app.get("/results", async (req, res) =>{
-//     const results = await getResults(user.email, user.id);
-// })
+app.get("/results", async (req, res) =>{
+    const results = await getResults(user.email, user.id);
+
+
+// FIGURE THIS SHIT OUT, maybe something like if .row length > 0 then
+// Also you manually set the user and email so go change that once you figure it out
+
+    // if(results.length > 0 ){
+    //     console.log("suck")
+    // }
+    // var htmlResults = ;
+    // var cssResults = ;
+    // var jsResults = ;
+    // var accessResults = ;
+
+    // res.render("userResults.ejs",{
+    //     email: user.email,
+    //     htmlResults: results[0].rows[0].result,
+    //     cssResults: results[1].rows[0].result,
+    //     jsResults: results[2].rows[0].result,
+    //     accessResults: results[3].rows[0].result
+    // });
+    
+})
 
 
 app.listen(port, () => {

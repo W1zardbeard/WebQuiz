@@ -1,6 +1,6 @@
 var user = {
-    id: "",
-    email: ""
+    id: "70",
+    email: "sausage@gmail.com"
 };
 
 
