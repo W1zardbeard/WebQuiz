@@ -1,66 +1,90 @@
 <div class="mainContainer">
 <div class=" resultCont">
-    <div class="resultCard">
-        <div class="subjectTitle column">
+    <div class="resultCard fullResultCard">
+        <div class="subjectTitle column subResultTitle">
             
                 <div class="iconCont HTMLbg">
                     <img src="../images/icon-html.svg">
                 </div>
                 <h2 class="heroTitle">HTML</h2>
         </div>
-        <% if(locals.htmlResults){%>
+        <% if(locals.htmlResults != "NoRecord"){%>
             <h1 class="resultNumber"><%= htmlResults %></h1>
             <p class="subHead">out of 10</p>
+            <a href="/HTML/1" class="resultBtn">
+                <button class="btn " type="submit">Retake</button>
+            </a>
         <%} else{%>
-            <p> sucky</p>
+            <h1 class="">Quiz not <span class="bold">taken</span></h1>
+            <a href="/HTML/1" class="resultBtn">
+                <button class="btn resultBtn" type="submit">Take quiz</button>
+            </a>
         <%}%>
     </div>
 
-    <div class="resultCard">
-        <div class="subjectTitle column">
+    <div class="resultCard fullResultCard">
+        <div class="subjectTitle column subResultTitle">
             
                 <div class="iconCont CSSbg">
                     <img src="../images/icon-css.svg">
                 </div>
                 <h2 class="heroTitle">CSS</h2>
         </div>
-        <% if(locals.cssResults){%>
+        <% if(locals.cssResults != "NoRecord"){%>
             <h1 class="resultNumber"><%= cssResults %></h1>
             <p class="subHead">out of 10</p>
+            <a href="/CSS/1" class="resultBtn">
+                <button class="btn " type="submit">Retake</button>
+            </a>
         <%} else{%>
-            <p> sucky</p>
+            <h1 class="">Quiz not <span class="bold">taken</span></h1>
+            <a href="/CSS/1" class="resultBtn">
+                <button class="btn resultBtn" type="submit">Take quiz</button>
+            </a>
         <%}%>
     </div>
 
-    <div class="resultCard">
-        <div class="subjectTitle column">
+    <div class="resultCard fullResultCard">
+        <div class="subjectTitle column subResultTitle">
             
                 <div class="iconCont JSbg">
                     <img src="../images/icon-js.svg">
                 </div>
                 <h2 class="heroTitle">Javascript</h2>
         </div>
-        <% if(locals.jsResults){%>
+        <% if(locals.jsResults != "NoRecord"){%>
             <h1 class="resultNumber"><%= jsResults %></h1>
             <p class="subHead">out of 10</p>
+            <a href="/JS/1" class="resultBtn">
+                <button class="btn " type="submit">Retake</button>
+            </a>
         <%}else{%>
-            <p> sucky</p>
+            <h1 class="">Quiz not <span class="bold">taken</span></h1>
+            <a href="/JS/1" class="resultBtn">
+                <button class="btn resultBtn" type="submit">Take quiz</button>
+            </a>
         <%}%>
     </div>
 
-    <div class="resultCard">
-        <div class="subjectTitle column">
+    <div class="resultCard fullResultCard">
+        <div class="subjectTitle column subResultTitle">
             
                 <div class="iconCont Accessbg">
                     <img src="../images/icon-accessibility.svg">
                 </div>
                 <h2 class="heroTitle">Accessibility</h2>
         </div>
-        <% if(locals.accessResults){%>
+        <% if(locals.accessResults != "NoRecord"){%>
             <h1 class="resultNumber"><%= accessResults %></h1>
             <p class="subHead">out of 10</p>
+            <a href="/Accessibility/1" class="resultBtn">
+                <button class="btn " type="submit">Retake</button>
+            </a>
         <%}else{%>
-            <p> sucky</p>
+            <h1 class="">Quiz not <span class="bold">taken</span></h1>
+            <a href="/Accessibility/1" class="resultBtn">
+                <button class="btn resultBtn" type="submit">Take quiz</button>
+            </a>
         <%}%>
     </div>
     </div>
